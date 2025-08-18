@@ -6,7 +6,7 @@ To connect to a remote server:
 ssh user@hostname
 ```
 
-To add a user who cannot log in:
+To disable root login:
 
 ```bash
 sudo vi /etc/ssh/sshd_config
@@ -25,4 +25,4 @@ systemctl restart sshd
 ```
 
 ### Repeat on All 3 App Servers
-### Remove # from PermitRootLogin
+### If 'PermitRootLogin' is commented out, uncomment it and set its value to 'no' for improved security:
